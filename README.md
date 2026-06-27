@@ -9,4 +9,3 @@ This tag template accesses the specific Tapper query parameter from the URL and 
 
 ## Resources
 - [**Tapper Homepage**](https://tapper.ai) 
-- [**Tapper First-Party Cookie Setter Documentation**](https://docs.tapper.ai/gtm/web-identifier-setter) 

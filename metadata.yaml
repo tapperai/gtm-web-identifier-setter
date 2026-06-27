@@ -1,5 +1,4 @@
 homepage: "https://tapper.ai"
-documentation: "https://docs.tapper.ai/gtm/web-identifier-setter" 
 versions:
   - sha: 1662742ff3d4f1bdd5558421ed80e0d8c6723223 
     changeNotes: Update identifier setting method. 
