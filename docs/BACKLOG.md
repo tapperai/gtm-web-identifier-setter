@@ -30,7 +30,7 @@ Categories:
 
 ## P1 — open
 
-(none)
+- **Broken docs link (found 2026-09-29).** `README.md` and `metadata.yaml` `documentation:` both point at `https://docs.tapper.ai/gtm/web-identifier-setter`, which returns 404. The Gallery listing links there: the Gallery API (`https://tagmanager.google.com/api/gallery/owners/tapperai/templates/gtm-web-identifier-setter`) returns it as `documentationUrl`. No page in the `docs` repo mentions this template today. The README link text also calls the template a "First-Party Cookie Setter", but it writes localStorage, not a cookie. Fix by adding that page to the `docs` repo, which needs no change here, or by pointing both links at a page that exists. Google's Gallery docs describe an update only as a new `versions` entry naming a `template.tpl` commit. Nobody has measured whether a change that only repoints `documentation` reaches the listing without one, so check the Gallery API afterwards. An earlier attempt, commit `9c87d19` (2026-06-28), sits on the stray `main` branch and on `gtm-web-identifier-setter/flawless-fixes`, and never reached `master`, the default branch the Gallery reads. It deletes the `documentation:` line, which Google's setup steps list as an entry, so do not cherry-pick it as-is. Land any fix on `master`, never on `main`.
 
 ---
 

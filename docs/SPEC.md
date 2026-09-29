@@ -3,7 +3,7 @@
 > **Status:** `LIVE`
 >
 > **Created:** 2026-08-26
-> **Last updated:** 2026-08-26
+> **Last updated:** 2026-09-29
 >
 > **Implemented in:** gtm-web-identifier-setter
 
@@ -75,7 +75,7 @@ refuses to save/publish them:
 
 | Permission | Scope |
 |---|---|
-| `get_url` | Read query parameters, restricted to `queriesAllowed: specific`, `queryKeys: ["tclid"]` |
+| `get_url` | Query part only: `urlParts: specific` with `query: true`, `queriesAllowed: specific`, `queryKeys: ["tclid"]` |
 | `access_local_storage` | Key `tclid`, `read: false`, `write: true` — write-only access to that one key |
 
 ---
