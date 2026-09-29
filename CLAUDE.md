@@ -25,4 +25,4 @@
 
 ## Public repo
 
-This repo is PUBLIC because the GTM Community Template Gallery serves it. Commits, PRs, issues, comments and docs here carry the technical change only: no customer names, domains, rates, counts, internal table names or operator quotes. Edit history keeps old text, so rewriting a PR body later does not remove a leak. Put the why and the evidence in a private repo, in its `docs/BACKLOG.md` or on a private twin PR.
+This repo is PUBLIC because the GTM Community Template Gallery serves it. Commits, PRs, issues, comments and docs here carry the technical change only: no customer names, domains, rates, counts, internal table names or operator quotes. Edit history keeps old text, so rewriting a PR body later does not remove a leak. Keep technical evidence (a 404, a Gallery field) here; put customer and business context in a private repo, in its `docs/BACKLOG.md` or on a private twin PR.

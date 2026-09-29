@@ -1,7 +1,8 @@
 # Backlog
 
 Living list of every TODO the user has called out. When the user mentions
-something new, capture it here verbatim before starting work. When something
+something new, capture it here in technical words before starting work; this
+repo is public, see CLAUDE.md "Public repo". When something
 lands, move it under "Done" with the SHA / date.
 
 Categories:
