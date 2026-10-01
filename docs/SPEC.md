@@ -3,7 +3,7 @@
 > **Status:** `LIVE`
 >
 > **Created:** 2026-08-26
-> **Last updated:** 2026-09-29
+> **Last updated:** 2026-10-01
 >
 > **Implemented in:** gtm-web-identifier-setter
 
@@ -16,6 +16,12 @@ and, if present, writes it into the browser's `localStorage` under the key
 `tclid`. This is how a Tapper click ID that arrives on a landing page via URL
 gets persisted client-side so later Tapper tracking/conversion code on the
 same origin can read it back out of `localStorage`.
+
+The only reader of that key is the `gtm-web-event-dispatcher` template, which
+sends it to `api.tapper.ai/gtm/track`. That endpoint has returned 404 since
+2026-01-27 (re-checked 2026-10-01), so the dispatcher is inert and nothing
+consumes the value this template writes. The docs-page item in
+`docs/BACKLOG.md` is on hold until the dispatcher is retired or restored.
 
 The whole repo is this one file plus GTM Gallery metadata — there is no
 build step, no server, no dependencies, and no other source files.
