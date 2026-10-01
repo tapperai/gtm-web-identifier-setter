@@ -22,3 +22,7 @@
 - Items that exist as code but the user has not yet seen working live in `## P0 — needs verification`.
 - Never silently drop a request. If you push back on scope, write the rationale inline next to the entry.
 - Treat `docs/BACKLOG.md` as authoritative when the user says "did you do X" — search there first before re-reading code or git log.
+
+## Public repo
+
+This repo is PUBLIC because the GTM Community Template Gallery serves it. Commits, PRs, issues, comments and docs here carry the technical change only: no customer names, domains, rates, counts, internal table names or operator quotes. Edit history keeps old text, so rewriting a PR body later does not remove a leak. Keep technical evidence (a 404, a Gallery field) here; put customer and business context in a private repo, in its `docs/BACKLOG.md` or on a private twin PR.

@@ -3,7 +3,7 @@
 > **Status:** `LIVE`
 >
 > **Created:** 2026-08-26
-> **Last updated:** 2026-08-26
+> **Last updated:** 2026-10-01
 >
 > **Implemented in:** gtm-web-identifier-setter
 
@@ -16,6 +16,12 @@ and, if present, writes it into the browser's `localStorage` under the key
 `tclid`. This is how a Tapper click ID that arrives on a landing page via URL
 gets persisted client-side so later Tapper tracking/conversion code on the
 same origin can read it back out of `localStorage`.
+
+The only reader of that key is the `gtm-web-event-dispatcher` template, which
+sends it to `api.tapper.ai/gtm/track`. That endpoint has returned 404 since
+2026-01-27 (re-checked 2026-10-01), so the dispatcher is inert and nothing
+consumes the value this template writes. The docs-page item in
+`docs/BACKLOG.md` is on hold until the dispatcher is retired or restored.
 
 The whole repo is this one file plus GTM Gallery metadata — there is no
 build step, no server, no dependencies, and no other source files.
@@ -75,7 +81,7 @@ refuses to save/publish them:
 
 | Permission | Scope |
 |---|---|
-| `get_url` | Read query parameters, restricted to `queriesAllowed: specific`, `queryKeys: ["tclid"]` |
+| `get_url` | Query part only: `urlParts: specific` with `query: true`, `queriesAllowed: specific`, `queryKeys: ["tclid"]` |
 | `access_local_storage` | Key `tclid`, `read: false`, `write: true` — write-only access to that one key |
 
 ---
@@ -107,12 +113,15 @@ See [TESTING.md](TESTING.md).
   scenarios, and a creation-date `___NOTES___` footer)
 - `metadata.yaml` — GTM Gallery submission metadata: homepage/docs URLs and
   a version history (`sha` + `changeNotes` per released version)
-- `README.md` — Gallery-facing overview/feature list, linked from
-  `metadata.yaml`'s `documentation` URL
+- `README.md` — Gallery-facing overview/feature list. Its docs link (labelled
+  "Cookie Setter", a mislabel) and `metadata.yaml`'s `documentation` URL both
+  point at https://docs.tapper.ai/gtm/web-identifier-setter, which returns
+  404 (checked 2026-09-29); see Remaining Work
 
 ---
 
 ## Remaining Work
 
-None known — this template is a single small, stable file with no open
-implementation gaps.
+- The template logic has no known gaps.
+- Broken documentation link in `README.md` and `metadata.yaml` (404, plus the
+  "Cookie Setter" label in the README). Tracked as P1 in `docs/BACKLOG.md`.
