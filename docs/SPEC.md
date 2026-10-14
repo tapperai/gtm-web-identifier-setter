@@ -17,7 +17,7 @@ and, if present, writes it into the browser's `localStorage` under the key
 gets persisted client-side so later Tapper tracking/conversion code on the
 same origin can read it back out of `localStorage`.
 
-The only reader of that key is the `gtm-web-event-dispatcher` template, which
+The only reader of that key is the `gtm-web-event-dispatcher` template (repo archived), which
 sends it to `api.tapper.ai/gtm/track`. That endpoint has returned 404 since
 2026-01-27 (re-checked 2026-10-01), so the dispatcher is inert and nothing
 consumes the value this template writes. The docs-page item in
