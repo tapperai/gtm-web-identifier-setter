@@ -26,3 +26,9 @@
 ## Public repo
 
 This repo is PUBLIC because the GTM Community Template Gallery serves it. Commits, PRs, issues, comments and docs here carry the technical change only: no customer names, domains, rates, counts, internal table names or operator quotes. Edit history keeps old text, so rewriting a PR body later does not remove a leak. Keep technical evidence (a 404, a Gallery field) here; put customer and business context in a private repo, in its `docs/BACKLOG.md` or on a private twin PR.
+
+## What this repo is
+
+A single GTM Community Template, `template.tpl`: it reads the `tclid` query parameter and writes it to `localStorage` under the key `tclid`. There is no build, no test suite and no CI workflow; `template.tpl`'s `___TESTS___` block is empty, so verification is manual in GTM Preview (`docs/TESTING.md`). `master` is the default branch and has no branch protection or merge queue.
+
+**Release:** the GTM Community Template Gallery serves the commit named by the FIRST `versions[]` entry in `metadata.yaml` (newest first), not `master` HEAD. A change reaches no one until a new first entry points at its real commit sha. To see what the Gallery serves now, read `versions[0].sha` from https://tagmanager.google.com/api/gallery/owners/tapperai/templates/gtm-web-identifier-setter (drop the first line of the answer).
