@@ -11,6 +11,8 @@
 6. After implementing, update the spec to match what was built — keep specs and code in sync at all times. Mark `Implemented in:` with the current repo name. Move completed items out of Remaining Work. Mark any sections that are designed but not yet coded as `PLANNED`
 7. **For doc commands** (e.g., `Check spec drift`, full rerun, setup) — read `docs/DOCUMENT_FIRST.md` and follow its rules
 
+**Docs here:** decisions in `docs/decisions/NNNN-title.md` (short, frozen, a newer record supersedes an old one); how each area works now in `docs/<area>.md` (one page per area, about 300 lines, updated by the PR that changes the area). The rule is the `docs-rule` skill in loop.
+
 ## Backlog Discipline
 
 `docs/BACKLOG.md` is the single living list of every TODO the user has called out, **including ones that have already been shipped**.
